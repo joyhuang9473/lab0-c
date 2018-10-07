@@ -88,6 +88,12 @@ bool q_insert_head(queue_t *q, char *s)
         return true;
     }
 
+    if (newh != NULL) {
+        free(newh);
+    }
+    if (value != NULL) {
+        free(value);
+    }
     return false;
 }
 
@@ -125,6 +131,12 @@ bool q_insert_tail(queue_t *q, char *s)
         return true;
     }
 
+    if (newh != NULL) {
+        free(newh);
+    }
+    if (value != NULL) {
+        free(value);
+    }
     return false;
 }
 
